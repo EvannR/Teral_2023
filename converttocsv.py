@@ -2,7 +2,7 @@ import os
 import csv
 
 # Spécifiez le chemin du dossier contenant les sous-dossiers
-dossier_parent = "/chemin/vers/votre/dossier"
+dossier_parent = "C:\\Users\\Evann\\OneDrive\\Bureau\\teral\\casmedecins\\testdossier"
 
 # Créez un fichier CSV pour enregistrer les noms des dossiers
 fichier_csv = "noms_des_dossiers.csv"
