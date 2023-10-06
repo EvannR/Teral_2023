@@ -2,10 +2,11 @@ import os
 import csv
 
 # Spécifiez le chemin du dossier contenant les sous-dossiers
-dossier_parent = "C:\\Users\\Evann\\OneDrive\\Bureau\\teral\\casmedecins\\testdossier"
+dossier_parent = "C:\\Users\\Evann\\OneDrive\\Bureau\\teral\\casmedecins\\test"
 
 # Créez un fichier CSV pour enregistrer les noms des dossiers
 fichier_csv = "noms_des_dossiers.csv"
+#print(os.listdir(dossier_parent))
 
 # Créez un fichier CSV et écrivez les noms de dossier dans le fichier
 with open(fichier_csv, 'w', newline='') as csvfile:
@@ -19,3 +20,5 @@ with open(fichier_csv, 'w', newline='') as csvfile:
         # Vérifiez si le chemin est un dossier
         if os.path.isdir(chemin_dossier):
             writer.writerow([dossier])  # Écrivez le nom du dossier dans le fichier CSV
+
+
