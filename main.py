@@ -1,4 +1,5 @@
 import csv
+from mail import send_mail
 
 file_path = 'C:/Users/Evann/OneDrive/Bureau/teral/inversionistas/test.csv'
 
@@ -12,10 +13,12 @@ with open(file_path, 'r', newline='') as csvfile:
     for row in csvreader:
         # row est une liste représentant une ligne du CSV
         # Vous pouvez accéder à chaque élément en utilisant l'indice
-        nom = row[0]
-        age = row[1]
+        name = row[0]
+        mail_adress = row[1]
         
-        # Vous pouvez maintenant faire ce que vous voulez avec les données
-        print(f"Nom : {nom}, Âge : {age}")
+        # maintenant fais ce que tu veux avec les données
+        print(f"name : {name}, mail : {mail_adress}")
+        send_mail(name,mail_adress)
         
-        #print(row)
+
+#evann;evann2rb@gmail.com

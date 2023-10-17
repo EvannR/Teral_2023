@@ -16,6 +16,8 @@ email_password = motdepasse
 # on rentre les informations sur le destinataire
 email_receiver = 'evann@teral.com.co'
 
+name = "Evann"
+
 # on crée la connexion
 #context = ssl.create_default_context()
 #with smtplib.SMTP_SSL(smtp_address, smtp_port, context=context) as server:
@@ -25,12 +27,13 @@ email_receiver = 'evann@teral.com.co'
   #server.sendmail(email_address, email_receiver, 'bla bla')
 #################
 
-def send_mail(adresse) :
+def send_mail(name, adresse) :
 # on crée un e-mail
     message = MIMEMultipart("alternative")
     message["Subject"] = "[DataScientest] e-mail essai"
     message["From"] = email_address
     message["To"] = email_receiver
+
 
 # on crée un texte et sa version HTML
     texte = '''
@@ -41,10 +44,10 @@ def send_mail(adresse) :
     mon_lien_incroyable
     '''
 
-    html = '''
+    html = f'''
     <html>
     <body>
-    <h1>Bonjour</h1>
+    <h1>Bonjour {name}</h1>
     <p>Ma super newsletter</p>
     <b>Cdt</b>
     <br>
@@ -53,7 +56,7 @@ def send_mail(adresse) :
     </html>
     '''
 
-# on crée deux éléments MIMEText 
+# on crée deux éléments MIMEText, me renseigner à quoi ça sert  
     texte_mime = MIMEText(texte, 'plain')
     html_mime = MIMEText(html, 'html')
 
@@ -69,4 +72,4 @@ def send_mail(adresse) :
   # envoi du mail
         server.sendmail(email_address, adresse, message.as_string())
 
-send_mail(email_receiver)
+send_mail(name, email_receiver)
