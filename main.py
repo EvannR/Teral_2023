@@ -21,4 +21,3 @@ with open(file_path, 'r', newline='') as csvfile:
         send_mail(name,mail_adress)
         
 
-#evann;evann2rb@gmail.com
