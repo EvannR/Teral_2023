@@ -1,3 +1,5 @@
+
+
 def text(name,version,pdf_link):
     html1 = f'''
     <html>
@@ -31,7 +33,7 @@ def text(name,version,pdf_link):
     html2 = f'''
     <html>
     <body>
-    <h1>Hello  {name}</h1>
+    <h1>Hello {name}</h1>
     <p>I hope this message finds you well. Your investment portfolio on Crunchbase caught my attention.</p>
 
     <p>We are poised to launch a unique chat platform tailored specifically for medical professionals. 
@@ -60,20 +62,15 @@ def text(name,version,pdf_link):
     html3 = f'''
     <html>
     <body>
-    <h1>Dear {name}</h1>
-    <p>Hope you're doing very well.</p>
-    <p>Do you know a bunch of doctors are using WhatsApp or Telegram for serious medical chats?
-         Yes, it's happening. And we thought, "There's got to be a better way!" We create <b>TERAL, the chat for Doctors</b> </p>
-    <p>We've crafted TERAL with loads of love (and tech wizardry!) to be the go-to, ultra-secure chat platform just 
-        for healthcare professionals. It's more than just chatting – it's about speeding up responses, sharing clinical 
-        insights instantly, avoiding those pesky extra costs from unnecessary referrals, and overall, just making the whole 
-        healthcare system a bit smarter and a lot safer..</p>
-    <p>Excited? So are we! Let’s dive deeper into how TERAL can make a world of difference. </p>
+    <h1>Greetings {name}</h1>
+    <p>Your esteemed profile on Crunchbase resonated with our company's vision and aspirations.</p>
+    <p>We're at the forefront of introducing a dedicated chat platform for doctors,
+      and our seed round is imminent. I'm interested to understand if this aligns with your current 
+      investment focus. Could you share how you approach new deals and review pitch decks?</p>
 
 
-    <p>I’ve attached our <b>investor deck</b> and a demo for a deeper dive.</p>
-    <p>Let's schedule a meeting soon!</p>
-    <p>Cheers,</p>
+    <p>I've enclosed a video to provide a succinct overview of our platform.</p>
+    <p>Thank you in advance for your consideration.</p>
 
     <p>David Calderón<br>
     CEO<br>
@@ -88,8 +85,86 @@ def text(name,version,pdf_link):
     </html>
     '''
 
-    T = [html1,html2,html3]    
+    html4 = f'''
+    <html>
+    <body>
+    <h1>Hy {name}</h1>
+    <p>Stumbled upon your profile on Crunchbase and, gotta say, I’m impressed.</p>
+
+    <p>We're in the midst of shaping up a game-changing chat platform exclusively for doctors. 
+    And guess what? Seed round's right around the corner. Are you still on the prowl for some 
+    groundbreaking investments? How do you usually dive into deals or take a look at decks?</p>
+
+    <p>Oh, and check out this quick video I’ve attached. It’s our baby in action!</p>
+
+    <p>Catch you later and thanks for giving this a glance!</p>
+
+    <p>David Calderón<br>
+    CEO<br>
+    Teral</p>
+
+    <br>
+    <a href="https://youtu.be/a2crkSQyjXA">click for more information</a><br>
+    <a href={pdf_link}>introducing PDF</a>
+
+
+    </body>
+    </html>
+    '''
+
+
+    html5 = f'''
+    <html>
+    <body>
+    <h1>Hy {name}</h1>
+    <p>Your Crunchbase profile? Seriously cool.</p>
+
+    <p>Here's the scoop: we’re whipping up a chat platform, but not just any platform – one designed for our life-saving doctors. Seed round’s on the horizon. Got a moment to chat about investments? How do you typically scope out new deals or decks?</p>
+
+    <p>PS: Don’t miss the video attachment. It's a sneak peek of our magic.</p>
+
+    <p>Cheers and thanks for the peek!</p>
+
+    <p>David Calderón<br>
+    CEO<br>
+    Teral</p>
+
+    <br>
+    <a href="https://youtu.be/a2crkSQyjXA">click for more information</a><br>
+    <a href={pdf_link}>introducing PDF</a>
+
+
+    </body>
+    </html>
+    '''
+
+
+    html6 = f'''
+    <html>
+    <body>
+    <h1>Hy {name}</h1>
+    <p>Caught a glimpse of your investor mojo on Crunchbase – pretty stellar!</p>
+
+    <p>Here’s what we’ve got cooking: a chat platform, tailor-made for doctors. With our seed round fast approaching, I’m curious – are you hunting for the next big thing? What's your go-to method for reviewing deals or decks?</p>
+
+    <p>There’s a video attached here. It's our platform doing its thing, do check it out!</p>
+
+    <p>Thanks for the look-see!</p>
+
+
+    <p>David Calderón<br>
+    CEO<br>
+    Teral</p>
+
+    <br>
+    <a href="https://youtu.be/a2crkSQyjXA">click for more information</a><br>
+    <a href={pdf_link}>introducing PDF</a>
+
+
+    </body>
+    </html>
+    '''
+
+    T = [html1,html2,html3,html4,html5,html6]    
     texte = T[version]
     return texte
-
-#print(text("evann",1,"0"))
