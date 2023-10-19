@@ -1,11 +1,13 @@
 
-#motdepasse = 'rhdd ywyi bebf qptd'
+#motdepasse = 'rhdd ywyi bebf qptd' # Evann's token 
 
-password = "qxqe cfaz ivxp wncb"
+password = "qxqe cfaz ivxp wncb" #David's token 
 
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import smtplib, ssl
+from mail_text import text
+import random
 
 
 #################
@@ -38,12 +40,13 @@ pdf_link = "https://mail-attachment.googleusercontent.com/attachment/u/1/?ui=2&i
 def send_mail(name, adresse) :
 # on crée un e-mail
     message = MIMEMultipart("alternative")
-    message["Subject"] = "[DataScientest] e-mail essai"
+    message["Subject"] = "Teral : Revolutionize Healthcare Networking with Our App"
     message["From"] = email_address
     message["To"] = email_receiver
 
 
-# on crée un texte et sa version HTML
+#### on crée un texte et sa version HTML/ cette partie n'est clairement pas nécéssaire 
+
     texte = '''
     Bonjour 
     Ma super newsletter
@@ -51,8 +54,9 @@ def send_mail(name, adresse) :
 
     mon_lien_incroyable
     '''
+######################################################################################
 
-    html = f'''
+    html1 = f'''
     <html>
     <body>
     <h1>Dear {name}</h1>
@@ -88,9 +92,52 @@ def send_mail(name, adresse) :
     </html>
     '''
 
+
+    html2 = f'''
+    <html>
+    <body>
+    <h1>Dear {name}</h1>
+    <p>Hope you're doing very well.</p>
+    <p>Many platforms today aren't tailored for medical needs, posing risks of data breaches and non-compliance. 
+    Doctors are using Whatsapp and another not secure platforms for sensitive information. TERAL changes the game, 
+    prioritizing data privacy while fostering seamless dialogue among healthcare experts and giving specific functionalities for health care professionals.</p>
+    <p>Key features:</p>
+
+    <p>-Official groups and subgroups (Communities)<br>
+    -Exclusive workspace dor Hospital/Organisations<br>
+    -Monitoring and traceability of clinical cases<br>
+    - Consultations or Medical Staff<br>
+    - Clinical Case Repository<br>
+    -Patient Care Enhancement<br>
+    -TERI : Our 24/7 AI assistant<p>
+
+    <p>I’ve attached our investor deck and a demo for a deeper dive.</p>
+    <p>Keen on shaping the future of medical communication with us? Let's schedule a meeting soon.</p>
+    <p>Thanks for your time. I look forward to your feedback and hope for a fruitful collaboration.</p>
+    <p>Warm ragards,</p>
+
+    <p>David Calderón<br>
+    CEO<br>
+    Teral</p>
+
+    <br>
+    <a href="https://youtu.be/a2crkSQyjXA">click for more information</a><br>
+    <a href={pdf_link}>introducing PDF</a>
+
+
+    </body>
+    </html>
+    '''
+#############################################################################
+
+    version = random[0:1:2]    
+    text = text(name,version,pdf_link)
+
+
+
 # on crée deux éléments MIMEText, me renseigner à quoi ça sert  
     texte_mime = MIMEText(texte, 'plain')
-    html_mime = MIMEText(html, 'html')
+    html_mime = MIMEText(text, 'html')
 
 # on attache ces deux éléments 
     message.attach(texte_mime)
@@ -103,5 +150,5 @@ def send_mail(name, adresse) :
         server.login(email_address, email_password)
   # envoi du mail
         server.sendmail(email_address, adresse, message.as_string())
-
-#send_mail(name, email_receiver)
+        print(version)
+send_mail(name, email_receiver)
