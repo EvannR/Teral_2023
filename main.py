@@ -1,5 +1,7 @@
 import csv
 from mail import send_mail
+from write_csv import add_element
+import random
 
 file_path = 'C:/Users/Evann/OneDrive/Bureau/teral/inversionistas/test.csv'
 
@@ -18,6 +20,10 @@ with open(file_path, 'r', newline='') as csvfile:
         
         # maintenant fais ce que tu veux avec les données
         print(f"name : {name}, mail : {mail_adress}")
-        send_mail(name,mail_adress)
+        version = random.randint(0,6)
+
+        send_mail(name,mail_adress,version)
+
+        add_element(name,mail_adress,version)
         
 
