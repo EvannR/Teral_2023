@@ -4,9 +4,8 @@ import requests
 KEY = "17a8290471efc446b35ec95eb53d370a"
 
 #url = "https://www.crunchbase.com"  # Remplacez ceci par l'URL que vous souhaitez ouvrir
-url = "https://api.crunchbase.com/api/v4/entities/organizations/tesla-motors?card_ids=founders,raised_funding_rounds&field_ids=categories,short_description,rank_org_company,founded_on,website,facebook,created_at&user_key=" + KEY
-webbrowser.open(url)
-
+url = f"https://api.crunchbase.com/api/v4/entities/organizations/tesla-motors?card_ids=founders,raised_funding_rounds&field_ids=categories,short_description,rank_org_company,founded_on,website,facebook,created_at&user_key={KEY}"
+#webbrowser.open(url)
 
 
 # Envoi d'une requête GET à l'API
@@ -21,3 +20,6 @@ if response.status_code == 200:
 else:
     # La requête a échoué
     print(f"Échec de la requête avec le code d'état {response.status_code}")
+
+
+    
