@@ -29,7 +29,7 @@ def send_mail(name,adresse,version) :
     message = MIMEMultipart("alternative")
     message["Subject"] = "Teral : Revolutionize Healthcare Networking with Our App"
     message["From"] = email_address
-    message["To"] = email_receiver
+    message["To"] = adresse
 
     body = text(name,version,pdf_link)
 

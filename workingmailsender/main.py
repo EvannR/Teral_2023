@@ -4,9 +4,10 @@ from write_csv import add_element
 import random
 
 file_path = 'C:/Users/Evann/OneDrive/Bureau/teral/inversionistas/test.csv'
+file = "C:/Users/Evann/OneDrive/Documents/GitHub/medicalcase/workingmailsender/test.csv"
 
 # Ouvrir le fichier CSV en mode lecture
-with open(file_path, 'r', newline='') as csvfile:
+with open(file, 'r', newline='') as csvfile:
     # Créer un lecteur CSV
     csvreader = csv.reader(csvfile)
     csvreader = csv.reader(csvfile, delimiter=';')
@@ -20,7 +21,7 @@ with open(file_path, 'r', newline='') as csvfile:
         
         # maintenant fais ce que tu veux avec les données
         print(f"name : {name}, mail : {mail_adress}")
-        version = random.randint(0,6)
+        version = random.randint(0,5)
 
         send_mail(name,mail_adress,version)
 
