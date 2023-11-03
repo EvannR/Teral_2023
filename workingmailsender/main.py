@@ -25,6 +25,4 @@ with open(file, 'r', newline='') as csvfile:
 
         send_mail(name,mail_adress,version)
 
-        add_element(name,mail_adress,version)
-
-        
+        add_element(name,mail_adress,version)    
