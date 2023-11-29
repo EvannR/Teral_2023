@@ -3,7 +3,8 @@ from mail import send_mail
 from write_csv import add_element
 import random
 
-file_path = 'C:/Users/Evann/OneDrive/Bureau/teral/inversionistas/test.csv'
+#file_path = 'C:/Users/Evann/OneDrive/Bureau/teral/inversionistas/test.csv'
+
 file = "C:/Users/Evann/OneDrive/Documents/GitHub/medicalcase/workingmailsender/test.csv"
 
 # Ouvrir le fichier CSV en mode lecture

@@ -1,3 +1,4 @@
+import webbrowser
 def generate_pubmed_link(pmid):
     base_url = "https://pubmed.ncbi.nlm.nih.gov/"
     pubmed_link = f"{base_url}{pmid}/"
@@ -7,3 +8,5 @@ def generate_pubmed_link(pmid):
 pmid = "7947353"
 link = generate_pubmed_link(pmid)
 print("Lien PubMed:", link)
+webbrowser.open(link)
+

@@ -21,5 +21,4 @@ else:
     # La requête a échoué
     print(f"Échec de la requête avec le code d'état {response.status_code}")
 
-
-    
+  
