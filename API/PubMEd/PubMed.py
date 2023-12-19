@@ -23,23 +23,23 @@ def query(query):
 
 
 
-        title = data['title']
-        id = data['pubmed_id']
+        #title = data['title']
+        #id = data['pubmed_id']
 
 
-        print("id :", id)
-        print("titre :", title)
-        #
-        #print(type(article))
+        #print("id :", id)
+        #print("titre :", title)
+        
+       #print(type(article))
 
-query("ulna implant")
+        article_str= f"{article.toJSON}"
 
-        #article_str = f"{article.toJSON}"
-
-        #with open(article, 'r') as fichier:
-        #data = json.loads(article_str)
+        with open(article, 'r') as fichier:
+            data = json.loads(article.toJSON)
             # Print the type of object we've found (can be either PubMedBookArticle or PubMedArticle)
         #print(type(article))
 
     # Print a JSON representation of the object
-        #print(article.toJSON())
+        print(article.toJSON())
+
+query("ulna implant")
